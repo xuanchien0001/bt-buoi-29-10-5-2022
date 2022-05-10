@@ -31,7 +31,8 @@ function validate() {
     return undefined;
   }
 }
-dom(".card__add").addEventListener("submit", () => {
+dom(".card__add").addEventListener("submit", (e) => {
+      e.preventDefault();
   let newTask = validate();
   if (newTask) {
     taskTodo.push({
